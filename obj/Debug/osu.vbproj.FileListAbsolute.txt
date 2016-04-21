@@ -1,0 +1,29 @@
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\osu.exe.config
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\osu.exe
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\osu.pdb
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\osu.xml
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\Newtonsoft.Json.dll
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\bin\Debug\Newtonsoft.Json.xml
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.vbprojResolveAssemblyReference.cache
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.Form1.resources
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.Resources.resources
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.vbproj.GenerateResource.Cache
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.exe
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.xml
+c:\users\rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.pdb
+H:\osu\osu\bin\Debug\osu.exe.config
+H:\osu\osu\obj\Debug\osu.exe
+H:\osu\osu\obj\Debug\osu.xml
+H:\osu\osu\obj\Debug\osu.pdb
+H:\osu\osu\obj\Debug\osu.vbprojResolveAssemblyReference.cache
+H:\osu\osu\obj\Debug\osu.Form1.resources
+H:\osu\osu\obj\Debug\osu.Resources.resources
+H:\osu\osu\obj\Debug\osu.vbproj.GenerateResource.Cache
+H:\osu\osu\bin\Debug\osu.exe
+H:\osu\osu\bin\Debug\osu.pdb
+H:\osu\osu\bin\Debug\osu.xml
+H:\osu\osu\bin\Debug\MaterialSkin.dll
+H:\osu\osu\bin\Debug\Newtonsoft.Json.dll
+H:\osu\osu\bin\Debug\osuElements.Net.dll
+H:\osu\osu\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rowan\documents\visual studio 2015\Projects\osu\osu\obj\Debug\osu.APIKey.resources

@@ -10,6 +10,9 @@ Public Class Form1
 
 
     Public Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        My.Settings.APIKey = ""
+        '8c78359c01573083e5a8bb8a6ff775d940e6812b
+
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         If My.Settings.DarkTheme = "LIG0HT" Then
@@ -38,12 +41,24 @@ Public Class Form1
         Best.Columns.Add("pp")
     End Sub
 
-    Async Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
+    Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
+        GetData()
+    End Sub
+
+    Public Async Sub GetData()
         Dim uRep = New ApiUserRepository()      'Remove these when the .ToString("N0") bug is fixed
         Dim bRep = New ApiBeatmapRepository()
         Best.Items.Clear()
         GetBestCounter = 0
+        UsernameBox.Enabled = False
 
+        Try
+            Dim test = Await uRep.Get(UsernameBox.Text)
+            Dim test2 = (test.UserId)
+        Catch ex As Exception
+            MessageBox.Show("Invalid username, try again")
+            Return
+        End Try
         Dim account = Await uRep.Get(UsernameBox.Text)
         AccountImage.ImageLocation = ("http://s.ppy.sh/a/" & account.UserId)
         UsernameLabel.Text = account.Username
@@ -78,6 +93,7 @@ Public Class Form1
             Best.Items.AddRange(New ListViewItem() {one})
             GetBestCounter = GetBestCounter + 1
         End While
+        UsernameBox.Enabled = True
     End Sub
 
     Public Function ConvertRank(ByVal rank As String) As String
@@ -116,5 +132,12 @@ Public Class Form1
     End Sub
     Private Sub Best_ColumnWidthChanging(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnWidthChangingEventArgs) Handles Best.ColumnWidthChanging
         e.Cancel = True
+    End Sub
+
+    Private Sub UsernameBox_KeyDown(sender As Object, e As KeyEventArgs) Handles UsernameBox.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            GetData()
+        End If
     End Sub
 End Class

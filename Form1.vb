@@ -10,9 +10,6 @@ Public Class Form1
 
 
     Public Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        My.Settings.APIKey = ""
-        '8c78359c01573083e5a8bb8a6ff775d940e6812b
-
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         If My.Settings.DarkTheme = "LIG0HT" Then
@@ -57,6 +54,7 @@ Public Class Form1
             Dim test2 = (test.UserId)
         Catch ex As Exception
             MessageBox.Show("Invalid username, try again")
+            UsernameBox.Enabled = True
             Return
         End Try
         Dim account = Await uRep.Get(UsernameBox.Text)

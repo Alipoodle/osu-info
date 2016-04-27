@@ -19,10 +19,22 @@
 - Light and dark themes (click the toggle in the upper right)
 
 ## Install
-To get the latest version go to https://github.com/GreenTurtwig/osu-info/releases and downlaod the latest `osuinfoSetup.msi`. Then run the installer and osu!info *should* be installed onto your computer. :-)
+To get the latest version go to https://github.com/GreenTurtwig/osu-info/releases and downlaod the latest `osuinfoSetup.msi`.  
+  
+When you first run the installer SmartScreen might pop up and tell you the program might put your PC at risk, don't worry it won't. :-)  
+You can just click "More info" and then "Run anyway" to start the installer.
+
+After the installer has finished osu!info should *hopefully* be installed on your computer!  
+  
+You can download the latest version from the [releases](https://github.com/GreenTurtwig/osu-info/releases) page and run the newest installer to update to the latest version.
+  
+  
+When osu!info has been installed it should ask you for an API key on first startup, you can get one from the osu! website [here](https://osu.ppy.sh/p/api).
 
 ## Bugs/Issues
-If you encounter any bugs or issues you can report them on GitHub [here](https://github.com/GreenTurtwig/osu-info/issues) or *possibly* get help in the [Gitter chat](https://gitter.im/GreenTurtwig/osu-info).
+If you encounter any bugs or issues you can report them on GitHub [here](https://github.com/GreenTurtwig/osu-info/issues) or *possibly* get help in the [Gitter chat](https://gitter.im/GreenTurtwig/osu-info).  
+  
+If osu!info doesn't run then try deativating your antivirus and run again. I've personally had problems with it not running with Avast. :-(
 
 ## License
 You can view the full license [here](https://github.com/GreenTurtwig/osu-info/blob/master/LICENSE.txt)

@@ -79,14 +79,19 @@ Public Class Form1
     End Sub
 
     Public Async Sub GetBest()
+        Dim account = Await uRep.Get(UsernameBox.Text)
+        Dim top = Await uRep.GetBest(account.UserId)
         While GetBestCounter < 5
-            Dim account = Await uRep.Get(UsernameBox.Text)
-            Dim top = Await uRep.GetBest(account.UserId)
-
+            Try
+                Dim test As New ListViewItem(top.Item(GetBestCounter).Rank.ToString)
+            Catch ex As Exception
+                UsernameBox.Enabled = True
+                Return
+            End Try
             Dim one As New ListViewItem(ConvertRank(top.Item(GetBestCounter).Rank.ToString))
-            Dim map = Await bRep.Get(top.Item(GetBestCounter).BeatmapId)
+            Dim map = Await bRep.Get(Top.Item(GetBestCounter).BeatmapId)
             one.SubItems.Add(map.Title)
-            one.SubItems.Add(Math.Round(top.Item(GetBestCounter).Pp))
+            one.SubItems.Add(Math.Round(Top.Item(GetBestCounter).Pp))
             BMPs(GetBestCounter) = map.BeatmapSetId
             Best.Items.AddRange(New ListViewItem() {one})
             GetBestCounter = GetBestCounter + 1

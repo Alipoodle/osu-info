@@ -14,9 +14,10 @@
 - Show a users stats like accuracy and play count
 - Display how many SS, S and A scores a user has got
 - Show a users top 5 best maps and their rank along with pp
-- Click on a map to launch it in osu! or go to the page on https://osu.ppy.sh to download it
+- Show a users last 5 played maps
+- Click on a map to go to the page on https://osu.ppy.sh to download it
 - Some elements of Material Design
-- Light and dark themes (click the toggle in the upper right)
+- Light and dark themes
 
 ## Install
 To get the latest version go to https://github.com/GreenTurtwig/osu-info/releases and downlaod the latest `osuinfoSetup.msi`.  

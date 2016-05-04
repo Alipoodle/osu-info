@@ -7,7 +7,7 @@
 <p>osu!info is a Windows program that can get available osu! information with a UI using some elements of Material Design</p>
 ---
 ## Screenshots
-![Screenshot1](http://i.imgur.com/FAQPujp.png) ![Screenshot2](http://i.imgur.com/JXS1ZUA.png)
+![Screenshot1](http://puu.sh/oFOI6/0555b26903.png) ![Screenshot2](http://puu.sh/oFOLi/3e324bb9c5.png)
 
 ## Features
 - Show a users worldwide and country ranking

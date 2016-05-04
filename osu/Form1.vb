@@ -81,6 +81,7 @@ Public Class Form1
         SSLabel.Text = account.SSCount
         SLabel.Text = account.SCount
         ALabel.Text = account.ACount
+        CenterScores()
 
         GetBest()
     End Sub
@@ -150,5 +151,11 @@ Public Class Form1
     Private Sub RefreshIcon_Click(sender As Object, e As EventArgs) Handles RefreshIcon.Click
         UsernameBox.Text = UsernameLabel.Text
         GetData()
+    End Sub
+
+    Sub CenterScores()
+        SSLabel.Location = New Point((SS.Left + (SS.Width / 2)) - (SSLabel.Width / 2), 239)
+        SLabel.Location = New Point((S.Left + (S.Width / 2)) - (SLabel.Width / 2), 239)
+        ALabel.Location = New Point((A.Left + (A.Width / 2)) - (ALabel.Width / 2), 239)
     End Sub
 End Class

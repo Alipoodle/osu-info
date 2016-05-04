@@ -5,8 +5,10 @@ Imports osuElements.Api.Repositories
 Public Class Form1
     Dim uRep = New ApiUserRepository()
     Dim bRep = New ApiBeatmapRepository()
-    Dim BMPs(4) As Integer
+    Dim BMPB(4) As Integer
+    Dim BMPR(4) As Integer
     Dim GetBestCounter = 0
+    Dim GetRecentCounter = 0
 
 
     Public Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,7 +38,8 @@ Public Class Form1
         Best.Columns.Add("Rank")
         Best.Columns.Add("Name", 220)
         Best.Columns.Add("pp")
-
+        Recent.Columns.Add("Rank")
+        Recent.Columns.Add("Name", 280)
 
         UsernameBox.Text = My.Settings.DefaultUser
         GetData()
@@ -50,7 +53,9 @@ Public Class Form1
         Dim uRep = New ApiUserRepository()      'Remove these when the .ToString("N0") bug is fixed
         Dim bRep = New ApiBeatmapRepository()
         Best.Items.Clear()
+        Recent.Items.Clear()
         GetBestCounter = 0
+        GetRecentCounter = 0
         UsernameBox.Enabled = False
         OK.Enabled = False
         RefreshIcon.Enabled = False
@@ -81,9 +86,16 @@ Public Class Form1
         SSLabel.Text = account.SSCount
         SLabel.Text = account.SCount
         ALabel.Text = account.ACount
-        CenterScores()
+        CentreScores()
 
         GetBest()
+        GetRecent()
+    End Sub
+
+    Sub CentreScores()
+        SSLabel.Location = New Point((SS.Left + (SS.Width / 2)) - (SSLabel.Width / 2), 239)
+        SLabel.Location = New Point((S.Left + (S.Width / 2)) - (SLabel.Width / 2), 239)
+        ALabel.Location = New Point((A.Left + (A.Width / 2)) - (ALabel.Width / 2), 239)
     End Sub
 
     Public Async Sub GetBest()
@@ -94,19 +106,41 @@ Public Class Form1
                 Dim test As New ListViewItem(top.Item(GetBestCounter).Rank.ToString)
             Catch ex As Exception
                 UsernameBox.Enabled = True
+                OK.Enabled = True
+                RefreshIcon.Enabled = True
                 Return
             End Try
             Dim one As New ListViewItem(ConvertRank(top.Item(GetBestCounter).Rank.ToString))
             Dim map = Await bRep.Get(Top.Item(GetBestCounter).BeatmapId)
-            one.SubItems.Add(map.Title)
+            one.SubItems.Add(map.Title & " [" & map.version & "]")
             one.SubItems.Add(Math.Round(Top.Item(GetBestCounter).Pp))
-            BMPs(GetBestCounter) = map.BeatmapSetId
+            BMPB(GetBestCounter) = map.BeatmapSetId
             Best.Items.AddRange(New ListViewItem() {one})
             GetBestCounter = GetBestCounter + 1
         End While
         UsernameBox.Enabled = True
         OK.Enabled = True
         RefreshIcon.Enabled = True
+    End Sub
+
+    Public Async Sub GetRecent()
+        Recent.Show()
+        Dim account = Await uRep.Get(UsernameBox.Text)
+        Dim top = Await uRep.GetRecent(account.UserId)
+        While GetRecentCounter < 5
+            Try
+                Dim test As New ListViewItem(top.Item(GetRecentCounter).Rank.ToString)
+            Catch ex As Exception
+                Recent.Hide()
+                Return
+            End Try
+            Dim one As New ListViewItem(ConvertRank(top.Item(GetRecentCounter).Rank.ToString))
+            Dim map = Await bRep.Get(top.Item(GetRecentCounter).BeatmapId)
+            one.SubItems.Add(map.Title & " [" & map.version & "]")
+            BMPR(GetRecentCounter) = map.BeatmapSetId
+            Recent.Items.AddRange(New ListViewItem() {one})
+            GetRecentCounter = GetRecentCounter + 1
+        End While
     End Sub
 
     Public Function ConvertRank(ByVal rank As String) As String
@@ -116,12 +150,11 @@ Public Class Form1
             rank = "SS"
         ElseIf rank = "SH" Then
             rank = "S"
+        ElseIf rank = "F" Then
+            rank = "Fail"
         End If
         ConvertRank = rank
     End Function
-    Private Sub Best_ItemActivate(sender As Object, e As EventArgs) Handles Best.ItemActivate
-        osuURL.InClientDownload(BMPs(Best.FocusedItem.Index))
-    End Sub
 
     Private Sub Best_ColumnWidthChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnWidthChangedEventArgs) Handles Best.ColumnWidthChanged
         Static FireMe As Boolean = True
@@ -136,6 +169,18 @@ Public Class Form1
     Private Sub Best_ColumnWidthChanging(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnWidthChangingEventArgs) Handles Best.ColumnWidthChanging
         e.Cancel = True
     End Sub
+    Private Sub Recent_ColumnWidthChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnWidthChangedEventArgs) Handles Recent.ColumnWidthChanged
+        Static FireMe As Boolean = True
+        If FireMe = True Then
+            FireMe = False
+            Recent.Columns(0).Width = 60
+            Recent.Columns(1).Width = 280
+            FireMe = True
+        End If
+    End Sub
+    Private Sub Recent_ColumnWidthChanging(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnWidthChangingEventArgs) Handles Recent.ColumnWidthChanging
+        e.Cancel = True
+    End Sub
 
     Private Sub UsernameBox_KeyDown(sender As Object, e As KeyEventArgs) Handles UsernameBox.KeyDown
         If e.KeyCode = Keys.Enter Then
@@ -147,15 +192,15 @@ Public Class Form1
     Private Sub SettingsIcon_Click(sender As Object, e As EventArgs) Handles SettingsIcon.Click
         Settings.Show()
     End Sub
-
     Private Sub RefreshIcon_Click(sender As Object, e As EventArgs) Handles RefreshIcon.Click
         UsernameBox.Text = UsernameLabel.Text
         GetData()
     End Sub
 
-    Sub CenterScores()
-        SSLabel.Location = New Point((SS.Left + (SS.Width / 2)) - (SSLabel.Width / 2), 239)
-        SLabel.Location = New Point((S.Left + (S.Width / 2)) - (SLabel.Width / 2), 239)
-        ALabel.Location = New Point((A.Left + (A.Width / 2)) - (ALabel.Width / 2), 239)
+    Private Sub Best_ItemActivate(sender As Object, e As EventArgs) Handles Best.ItemActivate
+        osuURL.InClientDownload(BMPB(Best.FocusedItem.Index))
+    End Sub
+    Private Sub Recent_ItemActivate(sender As Object, e As EventArgs) Handles Recent.ItemActivate
+        osuURL.InClientDownload(BMPR(Recent.FocusedItem.Index))
     End Sub
 End Class

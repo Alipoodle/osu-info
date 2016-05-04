@@ -2,7 +2,11 @@
 Imports osuElements.Api.Repositories
 
 Public Class Settings
+    Dim uRep = New ApiUserRepository()
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BackIcon.Hide()
+        AboutPanel.Hide()
+
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         If My.Settings.DarkTheme = "LIGHT" Then
@@ -28,9 +32,6 @@ Public Class Settings
     End Sub
 
     Private Async Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
-        Dim uRep = New ApiUserRepository()
-
-
         If APIKeyBox.Text = Nothing Then
             MessageBox.Show("Enter your API key", "osu!info")
             Return
@@ -46,7 +47,6 @@ Public Class Settings
         My.Settings.APIKey = APIKeyBox.Text
 
 
-
         If DarkCheckbox.CheckState = CheckState.Checked Then
             SkinManager.Theme = MaterialSkinManager.Themes.DARK
             My.Settings.DarkTheme = "DARK"
@@ -54,7 +54,6 @@ Public Class Settings
             SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
             My.Settings.DarkTheme = "LIGHT"
         End If
-
 
 
         If DefaultUserBox.Text = Nothing Then
@@ -71,5 +70,32 @@ Public Class Settings
         End If
 
         Me.Close()
+    End Sub
+
+    Private Sub About_Click(sender As Object, e As EventArgs) Handles About.Click
+        BackIcon.Show()
+        SettingsPanel.Hide()
+        AboutPanel.Show()
+        Me.Text = "       About"
+        Me.Refresh()
+    End Sub
+    Private Sub AboutSelector_Click(sender As Object, e As EventArgs) Handles AboutSelector.Click
+        BackIcon.Show()
+        SettingsPanel.Hide()
+        AboutPanel.Show()
+        Me.Text = "       About"
+        Me.Refresh()
+    End Sub
+
+    Private Sub BackIcon_Click(sender As Object, e As EventArgs) Handles BackIcon.Click
+        BackIcon.Hide()
+        SettingsPanel.Show()
+        AboutPanel.Hide()
+        Me.Text = "Settings"
+        Me.Refresh()
+    End Sub
+
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+        Process.Start("https://github.com/GreenTurtwig/osu-info")
     End Sub
 End Class

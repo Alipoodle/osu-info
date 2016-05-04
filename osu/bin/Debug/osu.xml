@@ -32,6 +32,16 @@ osu
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:osu.My.Resources.Resources.back">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:osu.My.Resources.Resources.Icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:osu.My.Resources.Resources.refresh">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

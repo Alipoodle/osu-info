@@ -44,6 +44,9 @@ Partial Class Form1
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Best = New MaterialSkin.Controls.MaterialListView()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Recent = New MaterialSkin.Controls.MaterialListView()
+        Me.NoData = New MaterialSkin.Controls.MaterialLabel()
         Me.RefreshIcon = New System.Windows.Forms.PictureBox()
         Me.SettingsIcon = New System.Windows.Forms.PictureBox()
         Me.Flag = New System.Windows.Forms.PictureBox()
@@ -54,6 +57,7 @@ Partial Class Form1
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,7 +240,7 @@ Partial Class Form1
         Me.SSLabel.Depth = 0
         Me.SSLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.SSLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SSLabel.Location = New System.Drawing.Point(76, 239)
+        Me.SSLabel.Location = New System.Drawing.Point(96, 239)
         Me.SSLabel.MouseState = MaterialSkin.MouseState.HOVER
         Me.SSLabel.Name = "SSLabel"
         Me.SSLabel.Size = New System.Drawing.Size(17, 19)
@@ -250,7 +254,7 @@ Partial Class Form1
         Me.SLabel.Depth = 0
         Me.SLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.SLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.SLabel.Location = New System.Drawing.Point(147, 239)
+        Me.SLabel.Location = New System.Drawing.Point(168, 239)
         Me.SLabel.MouseState = MaterialSkin.MouseState.HOVER
         Me.SLabel.Name = "SLabel"
         Me.SLabel.Size = New System.Drawing.Size(17, 19)
@@ -264,7 +268,7 @@ Partial Class Form1
         Me.ALabel.Depth = 0
         Me.ALabel.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.ALabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ALabel.Location = New System.Drawing.Point(216, 239)
+        Me.ALabel.Location = New System.Drawing.Point(237, 239)
         Me.ALabel.MouseState = MaterialSkin.MouseState.HOVER
         Me.ALabel.Name = "ALabel"
         Me.ALabel.Size = New System.Drawing.Size(17, 19)
@@ -287,6 +291,7 @@ Partial Class Form1
         '
         Me.MaterialTabControl1.Controls.Add(Me.TabPage1)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage2)
+        Me.MaterialTabControl1.Controls.Add(Me.TabPage3)
         Me.MaterialTabControl1.Depth = 0
         Me.MaterialTabControl1.Location = New System.Drawing.Point(0, 96)
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
@@ -354,6 +359,51 @@ Partial Class Form1
         Me.Best.TabIndex = 31
         Me.Best.UseCompatibleStateImageBehavior = False
         Me.Best.View = System.Windows.Forms.View.Details
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Recent)
+        Me.TabPage3.Controls.Add(Me.NoData)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(352, 293)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Recent"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Recent
+        '
+        Me.Recent.Activation = System.Windows.Forms.ItemActivation.OneClick
+        Me.Recent.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Recent.Depth = 0
+        Me.Recent.Font = New System.Drawing.Font("Roboto", 24.0!)
+        Me.Recent.FullRowSelect = True
+        Me.Recent.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.Recent.Location = New System.Drawing.Point(6, 6)
+        Me.Recent.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Recent.MouseState = MaterialSkin.MouseState.OUT
+        Me.Recent.MultiSelect = False
+        Me.Recent.Name = "Recent"
+        Me.Recent.OwnerDraw = True
+        Me.Recent.Scrollable = False
+        Me.Recent.Size = New System.Drawing.Size(340, 263)
+        Me.Recent.TabIndex = 32
+        Me.Recent.UseCompatibleStateImageBehavior = False
+        Me.Recent.View = System.Windows.Forms.View.Details
+        '
+        'NoData
+        '
+        Me.NoData.AutoSize = True
+        Me.NoData.Depth = 0
+        Me.NoData.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.NoData.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.NoData.Location = New System.Drawing.Point(136, 132)
+        Me.NoData.MouseState = MaterialSkin.MouseState.HOVER
+        Me.NoData.Name = "NoData"
+        Me.NoData.Size = New System.Drawing.Size(81, 19)
+        Me.NoData.TabIndex = 33
+        Me.NoData.Text = "No Data :-("
         '
         'RefreshIcon
         '
@@ -436,12 +486,16 @@ Partial Class Form1
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.Sizable = False
         Me.Text = "osu!info"
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Flag, System.ComponentModel.ISupportInitialize).EndInit()
@@ -481,4 +535,7 @@ Partial Class Form1
     Friend WithEvents SettingsIcon As PictureBox
     Friend WithEvents Flag As PictureBox
     Friend WithEvents RefreshIcon As PictureBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Recent As MaterialSkin.Controls.MaterialListView
+    Friend WithEvents NoData As MaterialSkin.Controls.MaterialLabel
 End Class

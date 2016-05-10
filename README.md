@@ -18,6 +18,7 @@
 - Click on a map to go to the page on https://osu.ppy.sh to download it
 - Some elements of Material Design
 - Light and dark themes
+- Custom colour themes
 
 ## Install
 To get the latest version go to https://github.com/GreenTurtwig/osu-info/releases and downlaod the latest `osuinfoSetup.msi`.  

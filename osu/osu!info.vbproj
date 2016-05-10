@@ -178,6 +178,29 @@
     <None Include="bin\Debug\theme-light-dark.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\yellow.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\arrow-left.png" />
+    <None Include="Resources\arrow-left-transparent.png" />
+    <None Include="Resources\blue_gray.png" />
+    <None Include="Resources\gray.png" />
+    <None Include="Resources\brown.png" />
+    <None Include="Resources\deep_orange.png" />
+    <None Include="Resources\orange.png" />
+    <None Include="Resources\amber.png" />
+    <None Include="Resources\lime.png" />
+    <None Include="Resources\light_green.png" />
+    <None Include="Resources\green.png" />
+    <None Include="Resources\teal.png" />
+    <None Include="Resources\cyan.png" />
+    <None Include="Resources\light_blue.png" />
+    <None Include="Resources\blue.png" />
+    <None Include="Resources\indigo.png" />
+    <None Include="Resources\deep_purple.png" />
+    <None Include="Resources\purple.png" />
+    <None Include="Resources\pink.png" />
+    <None Include="Resources\red.png" />
     <None Include="bin\Debug\settings.png" />
     <None Include="bin\Debug\refresh.png" />
     <None Include="bin\Debug\back.png" />

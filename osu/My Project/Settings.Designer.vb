@@ -89,6 +89,18 @@ Namespace My
                 Me("DefaultUser") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Pink")>  _
+        Public Property Colour() As String
+            Get
+                Return CType(Me("Colour"),String)
+            End Get
+            Set
+                Me("Colour") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

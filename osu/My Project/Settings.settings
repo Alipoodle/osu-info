@@ -11,5 +11,8 @@
     <Setting Name="DefaultUser" Type="System.String" Scope="User">
       <Value Profile="(Default)">peppy</Value>
     </Setting>
+    <Setting Name="Colour" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pink</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

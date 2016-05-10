@@ -196,6 +196,17 @@
         VbqflDvQRdorRUKsqEEEASiYysbubCzXMJNsIvmQf//Z
 </value>
   </data>
+  <data name="RefreshIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEbSURBVEhL7ZTBTsJAFEW7ERMJP4IYWWAk/BxfIKhA4oof8TeMS1csXYkmGpXxXHpJ0HboGDFh
+        wUlOKO/dNxNKO9me3SeEcIyXeIfPVtcDbDq2hO99X1ZDuIZj/MQY7zjCA+yr4PHNkNPitxqAN7zCLtax
+        gT28QW0gHvyZvMEkj4cZtl0uQO8c5wqucCsOmRZ+4CueulwK/eVtWcetOGSGeTRcu1QK/cLiwu04ZPSE
+        iK5LBeiVLi4ciUPmKY+GhkvbhYX/fYPKW/QnWDjpT16H7DQfCRcuxSGU/JgKMh3n5bejIwrB1BdNiz8q
+        CMm/WIObjoojPEPdltVRoWzN42loAKsOuwUqc+ix38Pwz+P6Be9Rp+iJY3t2liz7AqJsA0Ra7PZuAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAEBAAAAAAIABoBAAANgAAACAgAAAAACAAqBAAAJ4EAAAwMAAAAAAgAKglAABGFQAAKAAAABAA

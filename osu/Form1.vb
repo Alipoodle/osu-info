@@ -12,14 +12,7 @@ Public Class Form1
 
 
     Public Async Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
-        SkinManager.AddFormToManage(Me)
-        If My.Settings.DarkTheme = "LIGHT" Then
-            SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        ElseIf My.Settings.DarkTheme = "DARK" Then
-            SkinManager.Theme = MaterialSkinManager.Themes.DARK
-        End If
-        SkinManager.ColorScheme = New ColorScheme(Primary.Pink600, Primary.Pink700, Primary.Pink300, Accent.LightBlue100, TextShade.WHITE)
+        Theme()
 
         If My.Settings.APIKey = Nothing Then
             Dim Input = InputBox("Enter your API key", "osu!info")
@@ -202,5 +195,113 @@ Public Class Form1
     End Sub
     Private Sub Recent_ItemActivate(sender As Object, e As EventArgs) Handles Recent.ItemActivate
         osuURL.InClientDownload(BMPR(Recent.FocusedItem.Index))
+    End Sub
+
+    Private Sub Theme()
+        Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+        SkinManager.AddFormToManage(Me)
+
+        If My.Settings.DarkTheme = "LIGHT" Then
+            SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        ElseIf My.Settings.DarkTheme = "DARK" Then
+            SkinManager.Theme = MaterialSkinManager.Themes.DARK
+        End If
+
+        If My.Settings.Colour = "Red" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Red500, Primary.Red700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(244, 67, 54)
+            SettingsIcon.BackColor = Color.FromArgb(244, 67, 54)
+            RefreshIcon.BackColor = Color.FromArgb(244, 67, 54)
+        ElseIf My.Settings.Colour = "Pink" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Pink500, Primary.Pink700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(233, 30, 99)
+            SettingsIcon.BackColor = Color.FromArgb(233, 30, 99)
+            RefreshIcon.BackColor = Color.FromArgb(233, 30, 99)
+        ElseIf My.Settings.Colour = "Purple" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Purple500, Primary.Purple700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(156, 39, 176)
+            SettingsIcon.BackColor = Color.FromArgb(156, 39, 176)
+            RefreshIcon.BackColor = Color.FromArgb(156, 39, 176)
+        ElseIf My.Settings.Colour = "DeepPurple" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple500, Primary.DeepPurple700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(103, 58, 183)
+            SettingsIcon.BackColor = Color.FromArgb(103, 58, 183)
+            RefreshIcon.BackColor = Color.FromArgb(103, 58, 183)
+        ElseIf My.Settings.Colour = "Indigo" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Indigo500, Primary.Indigo700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(63, 81, 181)
+            SettingsIcon.BackColor = Color.FromArgb(63, 81, 181)
+            RefreshIcon.BackColor = Color.FromArgb(63, 81, 181)
+        ElseIf My.Settings.Colour = "Blue" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Blue500, Primary.Blue700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(33, 150, 243)
+            SettingsIcon.BackColor = Color.FromArgb(33, 150, 243)
+            RefreshIcon.BackColor = Color.FromArgb(33, 150, 243)
+        ElseIf My.Settings.Colour = "LightBlue" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.LightBlue500, Primary.LightBlue700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(3, 169, 244)
+            SettingsIcon.BackColor = Color.FromArgb(3, 169, 244)
+            RefreshIcon.BackColor = Color.FromArgb(3, 169, 244)
+        ElseIf My.Settings.Colour = "Cyan" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Cyan500, Primary.Cyan700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(0, 188, 212)
+            SettingsIcon.BackColor = Color.FromArgb(0, 188, 212)
+            RefreshIcon.BackColor = Color.FromArgb(0, 188, 212)
+        ElseIf My.Settings.Colour = "Teal" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(0, 150, 136)
+            SettingsIcon.BackColor = Color.FromArgb(0, 150, 136)
+            RefreshIcon.BackColor = Color.FromArgb(0, 150, 136)
+        ElseIf My.Settings.Colour = "Green" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Green500, Primary.Green700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(76, 175, 80)
+            SettingsIcon.BackColor = Color.FromArgb(76, 175, 80)
+            RefreshIcon.BackColor = Color.FromArgb(76, 175, 80)
+        ElseIf My.Settings.Colour = "LightGreen" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.LightGreen500, Primary.LightGreen700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(139, 195, 74)
+            SettingsIcon.BackColor = Color.FromArgb(139, 195, 74)
+            RefreshIcon.BackColor = Color.FromArgb(139, 195, 74)
+        ElseIf My.Settings.Colour = "Lime" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Lime500, Primary.Lime700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(205, 220, 57)
+            SettingsIcon.BackColor = Color.FromArgb(205, 220, 57)
+            RefreshIcon.BackColor = Color.FromArgb(205, 220, 57)
+        ElseIf My.Settings.Colour = "Yellow" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Yellow500, Primary.Yellow700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(255, 235, 59)
+            SettingsIcon.BackColor = Color.FromArgb(255, 235, 59)
+            RefreshIcon.BackColor = Color.FromArgb(255, 235, 59)
+        ElseIf My.Settings.Colour = "Amber" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Amber500, Primary.Amber700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(255, 193, 7)
+            SettingsIcon.BackColor = Color.FromArgb(255, 193, 7)
+            RefreshIcon.BackColor = Color.FromArgb(255, 193, 7)
+        ElseIf My.Settings.Colour = "Orange" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Orange500, Primary.Orange700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(255, 152, 0)
+            SettingsIcon.BackColor = Color.FromArgb(255, 152, 0)
+            RefreshIcon.BackColor = Color.FromArgb(255, 152, 0)
+        ElseIf My.Settings.Colour = "DeepOrange" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.DeepOrange500, Primary.DeepOrange700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(255, 87, 34)
+            SettingsIcon.BackColor = Color.FromArgb(255, 87, 34)
+            RefreshIcon.BackColor = Color.FromArgb(255, 87, 34)
+        ElseIf My.Settings.Colour = "Brown" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Brown500, Primary.Brown700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(121, 85, 72)
+            SettingsIcon.BackColor = Color.FromArgb(121, 85, 72)
+            RefreshIcon.BackColor = Color.FromArgb(121, 85, 72)
+        ElseIf My.Settings.Colour = "Gray" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.Grey500, Primary.Grey700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(158, 158, 158)
+            SettingsIcon.BackColor = Color.FromArgb(158, 158, 158)
+            RefreshIcon.BackColor = Color.FromArgb(158, 158, 158)
+        ElseIf My.Settings.Colour = "BlueGray" Then
+            SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey500, Primary.BlueGrey700, Primary.Red200, Accent.LightBlue100, TextShade.WHITE)
+            Settings.BackIcon.BackColor = Color.FromArgb(96, 125, 139)
+            SettingsIcon.BackColor = Color.FromArgb(96, 125, 139)
+            RefreshIcon.BackColor = Color.FromArgb(96, 125, 139)
+        End If
     End Sub
 End Class

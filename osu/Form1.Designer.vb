@@ -407,7 +407,7 @@ Partial Class Form1
         '
         'RefreshIcon
         '
-        Me.RefreshIcon.Image = Global.osu.My.Resources.Resources.refresh
+        Me.RefreshIcon.Image = CType(resources.GetObject("RefreshIcon.Image"), System.Drawing.Image)
         Me.RefreshIcon.Location = New System.Drawing.Point(289, 34)
         Me.RefreshIcon.Name = "RefreshIcon"
         Me.RefreshIcon.Size = New System.Drawing.Size(24, 24)

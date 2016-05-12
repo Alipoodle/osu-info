@@ -178,6 +178,8 @@
     <None Include="bin\Debug\theme-light-dark.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\UnknownFlag.png" />
+    <None Include="Resources\rainbow.png" />
     <None Include="Resources\yellow.png" />
     <None Include="Resources\settings.png" />
     <None Include="Resources\refresh.png" />

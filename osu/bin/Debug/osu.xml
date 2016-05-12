@@ -122,6 +122,11 @@ osu
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:osu.My.Resources.Resources.rainbow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:osu.My.Resources.Resources.red">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -148,6 +153,11 @@ osu
 </summary>
 </member>
 <member name="P:osu.My.Resources.Resources.teal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:osu.My.Resources.Resources.UnknownFlag">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

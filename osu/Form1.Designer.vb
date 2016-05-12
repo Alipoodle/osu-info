@@ -42,6 +42,11 @@ Partial Class Form1
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Flag = New System.Windows.Forms.PictureBox()
+        Me.AccountImage = New System.Windows.Forms.PictureBox()
+        Me.A = New System.Windows.Forms.PictureBox()
+        Me.S = New System.Windows.Forms.PictureBox()
+        Me.SS = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Best = New MaterialSkin.Controls.MaterialListView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -49,22 +54,17 @@ Partial Class Form1
         Me.NoData = New MaterialSkin.Controls.MaterialLabel()
         Me.RefreshIcon = New System.Windows.Forms.PictureBox()
         Me.SettingsIcon = New System.Windows.Forms.PictureBox()
-        Me.Flag = New System.Windows.Forms.PictureBox()
-        Me.AccountImage = New System.Windows.Forms.PictureBox()
-        Me.A = New System.Windows.Forms.PictureBox()
-        Me.S = New System.Windows.Forms.PictureBox()
-        Me.SS = New System.Windows.Forms.PictureBox()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flag, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccountImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.A, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.S, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SS, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameBox
@@ -329,6 +329,56 @@ Partial Class Form1
         Me.TabPage1.Text = "Profile"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Flag
+        '
+        Me.Flag.ErrorImage = Global.osu.My.Resources.Resources.UnknownFlag
+        Me.Flag.Location = New System.Drawing.Point(12, 6)
+        Me.Flag.Name = "Flag"
+        Me.Flag.Size = New System.Drawing.Size(25, 15)
+        Me.Flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Flag.TabIndex = 26
+        Me.Flag.TabStop = False
+        '
+        'AccountImage
+        '
+        Me.AccountImage.ErrorImage = CType(resources.GetObject("AccountImage.ErrorImage"), System.Drawing.Image)
+        Me.AccountImage.Image = Global.osu.My.Resources.Resources.avatar
+        Me.AccountImage.ImageLocation = ""
+        Me.AccountImage.InitialImage = CType(resources.GetObject("AccountImage.InitialImage"), System.Drawing.Image)
+        Me.AccountImage.Location = New System.Drawing.Point(12, 25)
+        Me.AccountImage.Name = "AccountImage"
+        Me.AccountImage.Size = New System.Drawing.Size(100, 100)
+        Me.AccountImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.AccountImage.TabIndex = 4
+        Me.AccountImage.TabStop = False
+        '
+        'A
+        '
+        Me.A.Image = Global.osu.My.Resources.Resources.A
+        Me.A.Location = New System.Drawing.Point(220, 186)
+        Me.A.Name = "A"
+        Me.A.Size = New System.Drawing.Size(50, 50)
+        Me.A.TabIndex = 21
+        Me.A.TabStop = False
+        '
+        'S
+        '
+        Me.S.Image = Global.osu.My.Resources.Resources.S
+        Me.S.Location = New System.Drawing.Point(151, 186)
+        Me.S.Name = "S"
+        Me.S.Size = New System.Drawing.Size(50, 50)
+        Me.S.TabIndex = 20
+        Me.S.TabStop = False
+        '
+        'SS
+        '
+        Me.SS.Image = Global.osu.My.Resources.Resources.SS
+        Me.SS.Location = New System.Drawing.Point(80, 186)
+        Me.SS.Name = "SS"
+        Me.SS.Size = New System.Drawing.Size(50, 50)
+        Me.SS.TabIndex = 19
+        Me.SS.TabStop = False
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Best)
@@ -425,55 +475,6 @@ Partial Class Form1
         Me.SettingsIcon.TabIndex = 31
         Me.SettingsIcon.TabStop = False
         '
-        'Flag
-        '
-        Me.Flag.Location = New System.Drawing.Point(12, 6)
-        Me.Flag.Name = "Flag"
-        Me.Flag.Size = New System.Drawing.Size(25, 15)
-        Me.Flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Flag.TabIndex = 26
-        Me.Flag.TabStop = False
-        '
-        'AccountImage
-        '
-        Me.AccountImage.ErrorImage = CType(resources.GetObject("AccountImage.ErrorImage"), System.Drawing.Image)
-        Me.AccountImage.Image = Global.osu.My.Resources.Resources.avatar
-        Me.AccountImage.ImageLocation = ""
-        Me.AccountImage.InitialImage = CType(resources.GetObject("AccountImage.InitialImage"), System.Drawing.Image)
-        Me.AccountImage.Location = New System.Drawing.Point(12, 25)
-        Me.AccountImage.Name = "AccountImage"
-        Me.AccountImage.Size = New System.Drawing.Size(100, 100)
-        Me.AccountImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.AccountImage.TabIndex = 4
-        Me.AccountImage.TabStop = False
-        '
-        'A
-        '
-        Me.A.Image = Global.osu.My.Resources.Resources.A
-        Me.A.Location = New System.Drawing.Point(220, 186)
-        Me.A.Name = "A"
-        Me.A.Size = New System.Drawing.Size(50, 50)
-        Me.A.TabIndex = 21
-        Me.A.TabStop = False
-        '
-        'S
-        '
-        Me.S.Image = Global.osu.My.Resources.Resources.S
-        Me.S.Location = New System.Drawing.Point(151, 186)
-        Me.S.Name = "S"
-        Me.S.Size = New System.Drawing.Size(50, 50)
-        Me.S.TabIndex = 20
-        Me.S.TabStop = False
-        '
-        'SS
-        '
-        Me.SS.Image = Global.osu.My.Resources.Resources.SS
-        Me.SS.Location = New System.Drawing.Point(80, 186)
-        Me.SS.Name = "SS"
-        Me.SS.Size = New System.Drawing.Size(50, 50)
-        Me.SS.TabIndex = 19
-        Me.SS.TabStop = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -493,16 +494,16 @@ Partial Class Form1
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Flag, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccountImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.A, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.S, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SS, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.RefreshIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

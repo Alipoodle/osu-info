@@ -49,8 +49,8 @@ Partial Class Settings
         Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.IconThing = New System.Windows.Forms.PictureBox()
         Me.CustomColourPanel = New System.Windows.Forms.Panel()
+        Me.Rainbow = New System.Windows.Forms.PictureBox()
         Me.Yellow = New System.Windows.Forms.PictureBox()
         Me.BlueGray = New System.Windows.Forms.PictureBox()
         Me.Gray = New System.Windows.Forms.PictureBox()
@@ -70,14 +70,15 @@ Partial Class Settings
         Me.Purple = New System.Windows.Forms.PictureBox()
         Me.Pink = New System.Windows.Forms.PictureBox()
         Me.Red = New System.Windows.Forms.PictureBox()
+        Me.IconThing = New System.Windows.Forms.PictureBox()
         Me.BackIcon = New System.Windows.Forms.PictureBox()
         Me.SettingsPanel.SuspendLayout()
         Me.CustomColourSelector.SuspendLayout()
         Me.LaunchosuSelector.SuspendLayout()
         Me.AboutSelector.SuspendLayout()
         Me.AboutPanel.SuspendLayout()
-        CType(Me.IconThing, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomColourPanel.SuspendLayout()
+        CType(Me.Rainbow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Yellow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlueGray, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Gray, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +98,7 @@ Partial Class Settings
         CType(Me.Purple, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pink, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Red, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconThing, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BackIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -430,7 +432,7 @@ Partial Class Settings
         Me.MaterialLabel2.Name = "MaterialLabel2"
         Me.MaterialLabel2.Size = New System.Drawing.Size(48, 19)
         Me.MaterialLabel2.TabIndex = 2
-        Me.MaterialLabel2.Text = "v1.2.0"
+        Me.MaterialLabel2.Text = "v1.3.1"
         '
         'MaterialLabel1
         '
@@ -445,18 +447,9 @@ Partial Class Settings
         Me.MaterialLabel1.TabIndex = 1
         Me.MaterialLabel1.Text = "osu!info"
         '
-        'IconThing
-        '
-        Me.IconThing.Image = Global.osu.My.Resources.Resources.Icon
-        Me.IconThing.Location = New System.Drawing.Point(3, 3)
-        Me.IconThing.Name = "IconThing"
-        Me.IconThing.Size = New System.Drawing.Size(75, 75)
-        Me.IconThing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.IconThing.TabIndex = 0
-        Me.IconThing.TabStop = False
-        '
         'CustomColourPanel
         '
+        Me.CustomColourPanel.Controls.Add(Me.Rainbow)
         Me.CustomColourPanel.Controls.Add(Me.Yellow)
         Me.CustomColourPanel.Controls.Add(Me.BlueGray)
         Me.CustomColourPanel.Controls.Add(Me.Gray)
@@ -480,6 +473,15 @@ Partial Class Settings
         Me.CustomColourPanel.Name = "CustomColourPanel"
         Me.CustomColourPanel.Size = New System.Drawing.Size(271, 294)
         Me.CustomColourPanel.TabIndex = 35
+        '
+        'Rainbow
+        '
+        Me.Rainbow.Location = New System.Drawing.Point(193, 227)
+        Me.Rainbow.Name = "Rainbow"
+        Me.Rainbow.Size = New System.Drawing.Size(50, 50)
+        Me.Rainbow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.Rainbow.TabIndex = 19
+        Me.Rainbow.TabStop = False
         '
         'Yellow
         '
@@ -671,6 +673,16 @@ Partial Class Settings
         Me.Red.TabIndex = 0
         Me.Red.TabStop = False
         '
+        'IconThing
+        '
+        Me.IconThing.Image = Global.osu.My.Resources.Resources.Icon
+        Me.IconThing.Location = New System.Drawing.Point(3, 3)
+        Me.IconThing.Name = "IconThing"
+        Me.IconThing.Size = New System.Drawing.Size(75, 75)
+        Me.IconThing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.IconThing.TabIndex = 0
+        Me.IconThing.TabStop = False
+        '
         'BackIcon
         '
         Me.BackIcon.Image = Global.osu.My.Resources.Resources.arrow_left
@@ -688,9 +700,9 @@ Partial Class Settings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(281, 368)
-        Me.Controls.Add(Me.SettingsPanel)
         Me.Controls.Add(Me.AboutPanel)
         Me.Controls.Add(Me.BackIcon)
+        Me.Controls.Add(Me.SettingsPanel)
         Me.Controls.Add(Me.CustomColourPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -710,9 +722,9 @@ Partial Class Settings
         Me.AboutSelector.PerformLayout()
         Me.AboutPanel.ResumeLayout(False)
         Me.AboutPanel.PerformLayout()
-        CType(Me.IconThing, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomColourPanel.ResumeLayout(False)
         Me.CustomColourPanel.PerformLayout()
+        CType(Me.Rainbow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Yellow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BlueGray, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Gray, System.ComponentModel.ISupportInitialize).EndInit()
@@ -732,6 +744,7 @@ Partial Class Settings
         CType(Me.Purple, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pink, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Red, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconThing, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BackIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -786,4 +799,5 @@ Partial Class Settings
     Friend WithEvents Gray As PictureBox
     Friend WithEvents BlueGray As PictureBox
     Friend WithEvents Yellow As PictureBox
+    Friend WithEvents Rainbow As PictureBox
 End Class

@@ -85,6 +85,9 @@ Public Class Settings
         BackIcon.Show()
         SettingsPanel.Hide()
         CustomColourPanel.Show()
+        If Form1.RainbowActive = 1 Then
+            Rainbow.Image = My.Resources.rainbow
+        End If
         Me.Text = "       Custom Colour"
         Me.Refresh()
     End Sub
@@ -92,6 +95,9 @@ Public Class Settings
         BackIcon.Show()
         SettingsPanel.Hide()
         CustomColourPanel.Show()
+        If Form1.RainbowActive = 1 Then
+            Rainbow.Image = My.Resources.rainbow
+        End If
         Me.Text = "       Custom Colour"
         Me.Refresh()
     End Sub
@@ -248,5 +254,15 @@ Public Class Settings
         Form1.SettingsIcon.BackColor = Color.FromArgb(96, 125, 139)
         Form1.RefreshIcon.BackColor = Color.FromArgb(96, 125, 139)
         My.Settings.Colour = "BlueGray"
+    End Sub
+
+    Private Sub Rainbow_Click(sender As Object, e As EventArgs) Handles Rainbow.Click
+        If Form1.UsernameBox.Text = "GreenTurtwig" Or Form1.UsernameBox.Text = "Alipoodle" Then
+            If Form1.RainbowActive = 0 Then
+                Rainbow.Image = My.Resources.rainbow
+                Form1.RainbowSub()
+                Form1.RainbowActive = 1
+            End If
+        End If
     End Sub
 End Class

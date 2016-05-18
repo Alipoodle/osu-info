@@ -3,7 +3,6 @@
 <title>osu!info</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#e91e63">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.pink-light_blue.min.css" />
 <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
@@ -13,11 +12,22 @@
 }
 .wf-subheading {
     background-color: #EC407A;
-    color: #fff;
 }
 .wf-subheading .mdl-button, .wf-subheading .mdl-button--accent.mdl-button--accent {
     color: #EC407A;
     background-color: #fff;
+}
+h3, p {
+    color: #fff;
+}
+
+.card-image.mdl-card {
+  width: 360px;
+  height: 450px;
+}
+.card-image-small.mdl-card {
+  width: 270px;
+  height: 350px;
 }
 </style>
 <body>
@@ -27,8 +37,8 @@
 	  <span class="mdl-layout__title">osu!info</span>
 	  <div class="mdl-layout-spacer"></div>
 	  <nav class="mdl-navigation">
-	    <a class="mdl-navigation__link" href="#">Download</a>
-		<a class="mdl-navigation__link" href="#">GitHub</a>
+	    <a class="mdl-navigation__link" href="https://github.com/GreenTurtwig/osu-info/releases">Download</a>
+		<a class="mdl-navigation__link" href="https://github.com/GreenTurtwig/osu-info">GitHub</a>
 	  </nav>
 	</div>
   </header>
@@ -39,17 +49,86 @@
     <div class="mdl-cell mdl-cell--10-col">
       <h3>osu!info</h3>
       <p>A Windows program that can get available osu! information with a UI using some elements of Material Design</p>
-      <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Download</a>
+      <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/GreenTurtwig/osu-info/releases">Download</a>
     </div>
     <div class="mdl-cell mdl-cell--1-col"></div>
   </div>
 </div>
-  </main>
+<br>
 
-  
 
-  
-  
+          <div class="mdl-grid mdl-typography--text-center">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="icon">
+                <svg fill="#fff" height="48" width="48" viewbox="0 0 24 24">
+                  <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                </svg>
+              </div>
+              <h3 class="mdl-typography--title">Accounts</h3>
+              <p>Enter the name of any player to get their stats, top and recent scores all in seperate tabs.</p>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="icon">
+                <svg fill="#fff" height="48" viewbox="0 0 24 24" width="48">
+                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                </svg>
+              </div>
+              <h3 class="mdl-typography--title">Top Scores</h3>
+			  <p>View a players top scores and the rank they got. You can also click on the map to open a link to download it.</p>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="icon">
+                <svg fill="#fff" height="48" viewbox="0 0 24 24" width="48">
+                  <path d="M11,7V12.11L15.71,14.9L16.5,13.62L12.5,11.25V7M12.5,2C8.97,2 5.91,3.92 4.27,6.77L2,4.5V11H8.5L5.75,8.25C6.96,5.73 9.5,4 12.5,4A7.5,7.5 0 0,1 20,11.5A7.5,7.5 0 0,1 12.5,19C9.23,19 6.47,16.91 5.44,14H3.34C4.44,18.03 8.11,21 12.5,21C17.74,21 22,16.75 22,11.5A9.5,9.5 0 0,0 12.5,2Z" />
+                </svg>
+              </div>
+              <h3 class="mdl-typography--title">Recent</h3>
+			  <p>View a players recent plays, their scores and weather they failed or not.</p>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="icon">
+                <svg fill="#fff" height="48" width="48" viewbox="0 0 24 24">
+                  <<path d="M17.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,9A1.5,1.5 0 0,1 19,10.5A1.5,1.5 0 0,1 17.5,12M14.5,8A1.5,1.5 0 0,1 13,6.5A1.5,1.5 0 0,1 14.5,5A1.5,1.5 0 0,1 16,6.5A1.5,1.5 0 0,1 14.5,8M9.5,8A1.5,1.5 0 0,1 8,6.5A1.5,1.5 0 0,1 9.5,5A1.5,1.5 0 0,1 11,6.5A1.5,1.5 0 0,1 9.5,8M6.5,12A1.5,1.5 0 0,1 5,10.5A1.5,1.5 0 0,1 6.5,9A1.5,1.5 0 0,1 8,10.5A1.5,1.5 0 0,1 6.5,12M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A1.5,1.5 0 0,0 13.5,19.5C13.5,19.11 13.35,18.76 13.11,18.5C12.88,18.23 12.73,17.88 12.73,17.5A1.5,1.5 0 0,1 14.23,16H16A5,5 0 0,0 21,11C21,6.58 16.97,3 12,3Z" />
+                </svg>
+              </div>
+              <h3 class="mdl-typography--title">Customise</h3>
+			  <p>Choose between light and dark themes and also select a custom theme colour.</p>
+            </div>
+          </div>
+<br><br><br><br>
+
+<div class="mdl-grid mdl-typography--text-left">
+<div class="mdl-cell mdl-cell--1-col mdl-layout--large-screen-only"></div>
+  <div class="mdl-cell mdl-cell--5-col mdl-layout--large-screen-only">
+<center><div style="background: url('http://puu.sh/oFOI6/0555b26903.png') center / cover" class="card-image mdl-card mdl-shadow--2dp"></div></center>
+  </div>
+  <div class="mdl-cell mdl-cell--5-col-tablet mdl-cell--4-col-phone mdl-layout--small-screen-only">
+<center><div style="background: url('http://puu.sh/oFOI6/0555b26903.png') center / cover" class="card-image-small mdl-card mdl-shadow--2dp"></div></center>
+  </div>
+  <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+    <h3 class="mdl-typography--title">Screenshot One</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut orci turpis, iaculis nec ligula vitae, bibendum rhoncus risus. Morbi eu velit sem. Curabitur turpis quam, rhoncus a dolor non, volutpat eleifend ligula. Vestibulum lacinia nibh.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col mdl-layout--large-screen-only"></div>
+</div>
+<br><br>
+<div class="mdl-grid mdl-typography--text-left">
+  <div class="mdl-cell mdl-cell--1-col mdl-layout--large-screen-only"></div>
+  <div class="mdl-cell mdl-cell--5-col mdl-layout--large-screen-only">
+<center><div style="background: url('http://puu.sh/oFOLi/3e324bb9c5.png') center / cover" class="card-image mdl-card mdl-shadow--2dp"></div></center>
+  </div>
+  <div class="mdl-cell mdl-cell--5-col-tablet mdl-cell--4-col-phone mdl-layout--small-screen-only">
+<center><div style="background: url('http://puu.sh/oFOLi/3e324bb9c5.png') center / cover" class="card-image-small mdl-card mdl-shadow--2dp"></div></center>
+  </div>
+  <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+    <h3 class="mdl-typography--title">Screenshot Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut orci turpis, iaculis nec ligula vitae, bibendum rhoncus risus. Morbi eu velit sem. Curabitur turpis quam, rhoncus a dolor non, volutpat eleifend ligula. Vestibulum lacinia nibh.</p>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col mdl-layout--large-screen-only"></div>
+</div>
+
+
+
 <footer class="mdl-mini-footer">
   <div class="mdl-mini-footer__left-section">
     <div class="mdl-logo">osu!info</div>
@@ -59,6 +138,7 @@
     </ul>
   </div>
 </footer>
+  </main>
 </div>
 </body>
 </html>

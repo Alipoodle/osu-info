@@ -1,0 +1,118 @@
+body {
+	background-color: #333333 !important; /** λ3 **/
+	color: #FFFFFF !important;
+}
+
+.navbar-brand {
+position: absolute;
+width: 100%;
+left: 0;
+top: 0;
+text-align: center;
+margin: auto;
+}
+.navbar-toggle {
+    z-index:3;
+}
+
+.fronttitle {
+	color: #FFFFFF;
+	font-size: 85px;
+}
+
+.extratitle {
+	color: #FFFFFF;
+	font-size: 30px;
+}
+
+.dlver {
+	color: inherit;
+	font-size: 9px;
+}
+
+.releasenotes {
+	color: #FFFFFF;
+	font-size: 11px;
+}
+
+footer {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+.footnote {
+	color: #FFFFFF;
+	font-size: 11px;
+}
+
+.white {
+	color: #FFFFFF;
+}
+
+/** osu! bounce **/
+/** Taken from osu! web (https://github.com/ppy/osu-web) **/
+/** Licensed under the GNU AFFERO GENERAL PUBLIC LICENSE (Ver. 3.0) - https://github.com/ppy/osu-web/blob/master/LICENCE **/
+/** Please don't sue us, thanks :) **/
+
+div#circleContainer {
+	margin: 1.75em;
+  width: 10em;
+}
+
+div#circleOverlay {
+      background-image: url("../img/logo.png");
+      position: relative;
+      z-index: 10;
+      opacity: 0.15;
+}
+
+div#circleOverlay, div#circleBounce, div#circleGlow, div#circleGlowTiming{
+	width: 10em;
+	height: 10em;
+  background-size: contain;
+  background-position: center center;
+}
+
+div#circleBounce {
+	background-image: url("../img/logo.png");
+	margin-top: -10em;
+	
+	animation-name: bounce;
+	animation-duration: 0.6s;
+ 	animation-iteration-count: 0;	
+}
+
+div#circleGlow, div#circleGlowTiming {
+	background-image: url("http://s33.postimg.org/ywmjj5g8f/glow.png");
+  
+	animation-name: glow;
+	animation-duration: 1.2s;
+	animation-timing-function: ease-out;
+ 	animation-iteration-count: 0;
+	animation-delay: 0.3s;
+
+	opacity: 0;
+  margin-top:-10em;
+}
+
+div#circleGlowTiming {
+	animation-delay: 0.9s;
+	margin-top: -10em;
+}
+
+@keyframes bounce {
+	0% { width: 10em; height: 10em; }
+ 	90% { transform: scale(1.05,1.05); }
+}
+
+@keyframes glow {
+	0% { width: 10em; height: 10em; }
+	5% { opacity: 1; }
+ 	100% { transform: scale(1.63,1.63); opacity: 0; }
+}
+
+div#circleContainer:hover > div {
+	animation-iteration-count: infinite;
+}
+
+/** / osu! bounce **/
